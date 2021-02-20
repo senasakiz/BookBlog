@@ -1,0 +1,44 @@
+﻿@model BookLibrary.Kitap
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    Cras justo odio
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Macera</a>
+                <a href="#" class="list-group-item list-group-item-action">Bilim Kurgu</a>
+                <a href="#" class="list-group-item list-group-item-action">Biyografi</a>
+                <a href="#" class="list-group-item list-group-item-action ">Polisiye</a>
+                <a href="#" class="list-group-item list-group-item-action ">Psikoloji</a>
+                <a href="#" class="list-group-item list-group-item-action ">Dünya Klasikleri</a>
+                <a href="#" class="list-group-item list-group-item-action ">Felsefe</a>
+                <a href="#" class="list-group-item list-group-item-action ">Fantastik</a>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+                <img src="~/img/@Model.Image" class="card-img-top" alt="@Model.BookName">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Beğendim</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Beğenmedim</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Model.BookName</h5>
+                    <p class="card-text">@Model.Description</p>
+                    <a href="#" class="btn btn-primary">Geri Dön</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

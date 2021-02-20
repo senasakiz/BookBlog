@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BookLibrary.Kitap>
+
+@foreach (var kitap in Model)
+{
+    <div class="card">
+        <img src="~/img/@kitap.Image" alt="@kitap.BookName">
+        <p class="card-text">@kitap.BookName</p>
+        <small class="text-muted">@kitap.BookType</small>
+        <div class="card-footer text-muted">
+            <a asp-controller="Home"
+               asp-action="Details"
+               asp-route-id="@kitap.BookId"
+               class="btn btn-primary">Detaylar</a>
+
+        </div>
+    </div>
+}
